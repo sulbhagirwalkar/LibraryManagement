@@ -12,9 +12,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "users")
 public class User {
  @Id
- @GeneratedValue
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
  private long id;
 
  private String name;

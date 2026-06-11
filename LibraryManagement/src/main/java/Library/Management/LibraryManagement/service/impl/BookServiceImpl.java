@@ -64,4 +64,10 @@ public class BookServiceImpl implements BookService {
         return List.of();
     }
 
+    @Override
+    public void deleteBook(Long bookId) {
+
+    }
+
+
 }
