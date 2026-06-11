@@ -3,6 +3,7 @@ package Library.Management.LibraryManagement.controller;
 import Library.Management.LibraryManagement.entity.Book;
 import Library.Management.LibraryManagement.entity.User;
 import Library.Management.LibraryManagement.service.BookService;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,12 +28,6 @@ public class BookController {
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks(){
         return ResponseEntity.ok(bookService.getAllBooks());
-
-    }
-    @DeleteMapping
-    public ResponseEntity<Void> deleteBook(@PathVariable Long id){
-        bookService.deleteBook(id);
-        return ResponseEntity.noContent().build();
 
     }
 }

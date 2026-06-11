@@ -11,5 +11,4 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Librarian extends User{
    //additional librarian-specific fields if needed
-
 }
